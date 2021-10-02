@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
         for ($k=0; $k < 3; $k++) {
             $categorie = new Categorie();
 
-            $categorie->setName($faker->words(3, true));
+            $categorie->setName('OUICESTMOI');
 
             $manager->persist($categorie);
         }
@@ -56,7 +56,7 @@ class AppFixtures extends Fixture
                 ->setCreatedAt($faker->dateTimeBetween('-6 month', 'now'))
                 ->setDescription($faker->text(300))
                 ->setPortfolio($faker->randomElement([true, false]))
-                ->setFile('public/assets/media/images/mockup-construction.png')
+                ->setFile('./assets/media/images/mockup-luxurycars.png')
                 ->setLink('.com')
                 ->addCategorie($categorie)
                 ->setUser($user);

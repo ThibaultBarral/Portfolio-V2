@@ -1,13 +1,26 @@
 /*--------------------------------
 ---------------PROJETS---------------
 ----------------------------------*/
-
-#projets.section > div {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
-#projets.section > div > div {
-    height: 100%;
+.card-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    border-radius: 40px;
+    transition: 0.5s;
+    margin-bottom: 5vh;
+    padding: 0 35px;
+}
+
+.text-card-project {
+    transition: 0.5s;
+    color: white;
+    line-height: 1.6;
 }
