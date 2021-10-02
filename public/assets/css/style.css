@@ -1,0 +1,124 @@
+@import url(fonts.css);
+@import url(reboot.css);
+@import url(responsive.css);
+@import url(./pages/home.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 80px;
+    margin-right: 80px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: black;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.margin-around {
+    display: flex;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+.padd-around {
+    display: flex;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.x-center {
+    justify-content: center;
+}
+
+.y-center {
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/*--------------------------------
+---------------MENU---------------
+----------------------------------*/
+menu {
+    width: 80px;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    border-right: 1px solid black;
+}
+
+/*--------------------------------
+---------------PROJETS---------------
+----------------------------------*/
+
+#projets.section > div {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projets.section > div > div {
+    height: 100%;
+}
+
+/*--------------------------------
+---------------CONTACT------------
+----------------------------------*/
+
+#contact > div > h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#contact > div > div > div:nth-child(2) > div > div.row.y-center > h1 {
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+#contact > div > div > div:nth-child(2) > div > div:nth-child(-n+3) > h1 {
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#contact > div > div > div:nth-child(2) > div > div > ul > li {
+    margin: 12px 0;
+}
