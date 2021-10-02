@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <!--SECTION 2-->
+    <section id="projets" class="row wrap">
+        <div class="padd-around column">
+            <h1 class="padd-around">Projets</h1>
+            <div class="row wrap">
+                {% for projet in projets %}
+                    <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12">
+                        <div class="padd-around column">
+                            <p>{{ projet.name }}</p>
+                            <p>{{ projet.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

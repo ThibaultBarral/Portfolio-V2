@@ -55,6 +55,11 @@ class Projet
      */
     private $categorie;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $link;
+
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
@@ -157,6 +162,18 @@ class Projet
     public function removeCategorie(Categorie $categorie): self
     {
         $this->categorie->removeElement($categorie);
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(?string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }

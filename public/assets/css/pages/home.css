@@ -30,7 +30,7 @@ section > div.xLarge-3.large-3.medium-12.small-12.xSmall-12 {
     box-shadow: -2px 0 10px 0 #707070;
 }
 
-.scroll {
+.scroll a {
     margin-bottom: 15px;
     position: absolute;
     bottom: 0;
@@ -45,7 +45,7 @@ section > div.xLarge-3.large-3.medium-12.small-12.xSmall-12 {
     animation: bounce 3s ease-in-out infinite;
 }
 
-.scroll:hover {
+.scroll a:hover {
     cursor: pointer;
     -webkit-text-stroke: 1px black;
     color: white;

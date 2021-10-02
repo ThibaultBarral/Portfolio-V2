@@ -1,0 +1,13 @@
+/*--------------------------------
+---------------PROJETS---------------
+----------------------------------*/
+
+#projets.section > div {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projets.section > div > div {
+    height: 100%;
+}

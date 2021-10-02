@@ -49,7 +49,7 @@ class AppFixtures extends Fixture
         }
 
         // Création de Projets
-        for ($i=0; $i < 3; $i++) {
+        for ($i=0; $i < 6; $i++) {
             $projet = new Projet();
 
             $projet->setName($faker->words(3, true))
@@ -57,6 +57,7 @@ class AppFixtures extends Fixture
                 ->setDescription($faker->text(300))
                 ->setPortfolio($faker->randomElement([true, false]))
                 ->setFile('public/assets/media/images/mockup-construction.png')
+                ->setLink('.com')
                 ->addCategorie($categorie)
                 ->setUser($user);
 
