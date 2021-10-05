@@ -56,7 +56,7 @@ class AppFixtures extends Fixture
                 ->setCreatedAt($faker->dateTimeBetween('-6 month', 'now'))
                 ->setDescription($faker->text(300))
                 ->setPortfolio($faker->randomElement([true, false]))
-                ->setFile('./assets/media/images/mockup-luxurycars.png')
+                ->setFile('mockup-luxurycars.png')
                 ->setLink('.com')
                 ->addCategorie($categorie)
                 ->setUser($user);

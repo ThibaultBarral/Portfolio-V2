@@ -11,9 +11,12 @@
                 {% for projet in projets %}
                     <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12">
                         <div class="padd-around column">
-                            <div class="card-project column" style="background-image: url('{{ asset(projet.file) }}')">
+                            <div class="card-project column" style="background-image: url({{ vich_uploader_asset(projet, 'imageFile') }})">
                                 <div class="text-card-project">
-                                    {{ projet.name }} {{ projet.description }}
+                                    {{ projet.name }}
+                                    <div>
+                                        {{ projet.description }}
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -6,9 +6,12 @@ use App\Repository\ProjetRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProjetRepository::class)
+ * @Vich\Uploadable
  */
 class Projet
 {
@@ -43,6 +46,12 @@ class Projet
      * @ORM\Column(type="string", length=255)
      */
     private $file;
+
+    /**
+     * @Vich\UploadableField(mapping="projet_images", fileNameProperty="file")
+     * @var File
+     */
+    private $imageFile;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="projets")
@@ -128,6 +137,20 @@ class Projet
         $this->file = $file;
 
         return $this;
+    }
+
+    public function setImageFile(File $file = null)
+    {
+        $this->imageFile = $file;
+
+        if ($file) {
+            $this->createdAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
     }
 
     public function getUser(): ?User
