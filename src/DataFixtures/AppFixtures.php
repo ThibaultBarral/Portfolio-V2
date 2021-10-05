@@ -49,7 +49,7 @@ class AppFixtures extends Fixture
         }
 
         // Création de Projets
-        for ($i=0; $i < 6; $i++) {
+        for ($i=0; $i < 2; $i++) {
             $projet = new Projet();
 
             $projet->setName($faker->words(3, true))

@@ -12,8 +12,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use Faker\Provider\Image;
-use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class ProjetCrudController extends AbstractCrudController

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\CategorieRepository;
 use App\Repository\ProjetRepository;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +17,7 @@ class ProjetController extends AbstractController
     public function projets(ProjetRepository $projetRepository): Response
     {
         return $this->render('projet/index.html.twig', [
-            'projets' => $projetRepository->findAll()
+            'projets' => $projetRepository->findBy(['portfolio' => '1'], ['id' => 'DESC'])
         ]);
     }
 }
